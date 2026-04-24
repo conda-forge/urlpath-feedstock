@@ -1,5 +1,5 @@
 {% set name = "urlpath" %}
-{% set version = "1.2.0" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/urlpath-{{ version }}.tar.gz
-  sha256: e54c0c82db4894a7217772150bdbc01413794576996e7834f81d67f22359c9d0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/urlpath-{{ version }}.tar.gz
+  sha256: 321b932709982079e71deddb4af56ffe3447a9596faa895de19cf0cbee23b239
 
 build:
   number: 0
