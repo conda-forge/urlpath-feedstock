@@ -13,15 +13,17 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python {{ python_min }}
+    - hatchling >=1.27.0
     - pip
-    - python >=3.4
   run:
-    - python >=3.4
+    - python >={{ python_min }}
     - requests
+    - charset-normalizer >=2,<4
 
 test:
   imports:
@@ -29,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
